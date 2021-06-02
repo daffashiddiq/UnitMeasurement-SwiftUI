@@ -13,6 +13,10 @@
 		7B25991226667B2D008ED260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B25991126667B2D008ED260 /* Assets.xcassets */; };
 		7B25991526667B2D008ED260 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B25991426667B2D008ED260 /* Preview Assets.xcassets */; };
 		7B25991826667B2D008ED260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B25991626667B2D008ED260 /* LaunchScreen.storyboard */; };
+		7B25992026671DD6008ED260 /* volumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B25991F26671DD6008ED260 /* volumeView.swift */; };
+		7B25992226672105008ED260 /* temperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B25992126672105008ED260 /* temperatureView.swift */; };
+		7B25992426672158008ED260 /* lengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B25992326672158008ED260 /* lengthView.swift */; };
+		7B25992626672187008ED260 /* timeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B25992526672187008ED260 /* timeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		7B25991426667B2D008ED260 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7B25991726667B2D008ED260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B25991926667B2D008ED260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B25991F26671DD6008ED260 /* volumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = volumeView.swift; sourceTree = "<group>"; };
+		7B25992126672105008ED260 /* temperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temperatureView.swift; sourceTree = "<group>"; };
+		7B25992326672158008ED260 /* lengthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lengthView.swift; sourceTree = "<group>"; };
+		7B25992526672187008ED260 /* timeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,10 @@
 				7B25990B26667B2A008ED260 /* AppDelegate.swift */,
 				7B25990D26667B2A008ED260 /* SceneDelegate.swift */,
 				7B25990F26667B2A008ED260 /* ContentView.swift */,
+				7B25992526672187008ED260 /* timeView.swift */,
+				7B25992326672158008ED260 /* lengthView.swift */,
+				7B25992126672105008ED260 /* temperatureView.swift */,
+				7B25991F26671DD6008ED260 /* volumeView.swift */,
 				7B25991126667B2D008ED260 /* Assets.xcassets */,
 				7B25991626667B2D008ED260 /* LaunchScreen.storyboard */,
 				7B25991926667B2D008ED260 /* Info.plist */,
@@ -145,8 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B25992426672158008ED260 /* lengthView.swift in Sources */,
 				7B25990C26667B2A008ED260 /* AppDelegate.swift in Sources */,
+				7B25992626672187008ED260 /* timeView.swift in Sources */,
 				7B25990E26667B2A008ED260 /* SceneDelegate.swift in Sources */,
+				7B25992226672105008ED260 /* temperatureView.swift in Sources */,
+				7B25992026671DD6008ED260 /* volumeView.swift in Sources */,
 				7B25991026667B2A008ED260 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

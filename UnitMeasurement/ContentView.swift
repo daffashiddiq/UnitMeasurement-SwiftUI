@@ -8,9 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    let measurements = ["Length","Temperature","Time","Volume"]
+    
+    @State var measurement = 1
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            Form {
+                Section(header: Text("Choose your measurement")) {
+                    Picker("Measurements", selection: $measurement) {
+                        ForEach(0 ..< measurements.count) {
+                            Text("\(self.measurements[$0])")
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+                }
+                if measurement == 1 {
+                    temperatureView()
+                } else if measurement == 0 {
+                    lengthView()
+                } else if measurement == 2 {
+                    timeView()
+                } else {
+                    volumeView()
+                }
+            }
+        }
     }
 }
 
