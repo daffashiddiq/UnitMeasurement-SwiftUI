@@ -12,6 +12,9 @@ struct lengthView: View {
     @State var lengthTarget = 0
     @State var lengthAmount = ""
     let lengths = ["m", "Km", "feet","Yards","Miles"]
+    var textColor: Bool {
+        return lengthAmount == "0" ? true : false
+    }
     
     var lengthResult: Measurement<UnitLength> {
         var startLength: Measurement<UnitLength>
@@ -56,6 +59,7 @@ struct lengthView: View {
             }.pickerStyle(SegmentedPickerStyle())
             TextField("Length Amount", text: $lengthAmount)
                 .keyboardType(.decimalPad)
+                .background(textColor ? Color.red : Color.white)
             Picker("Convert to", selection: $lengthTarget) {
                 ForEach(0 ..< lengths.count) {
                     Text("\(self.lengths[$0])")

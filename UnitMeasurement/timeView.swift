@@ -12,6 +12,9 @@ struct timeView: View {
     @State var timeTarget = 0
     @State var timeAmount = ""
     let times = ["Secs", "Mins", "Hours"]
+    var textColor: Bool {
+        return timeAmount == "0" ? true : false
+    }
     var timeResult: Measurement<UnitDuration> {
         var startTime: Measurement<UnitDuration>
         if time == 0 {
@@ -45,6 +48,7 @@ struct timeView: View {
             }.pickerStyle(SegmentedPickerStyle())
             TextField("Time Amount", text: $timeAmount)
                 .keyboardType(.decimalPad)
+                .background(textColor ? Color.red : Color.white)
             Picker("Convert to", selection: $timeTarget) {
                 ForEach(0 ..< times.count) {
                     Text("\(self.times[$0])")

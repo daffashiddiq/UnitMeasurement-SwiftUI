@@ -12,6 +12,9 @@ struct temperatureView: View {
     @State var temperatureTarget = 0
     @State var temperatureAmount = ""
     let temperatures = ["Celcius", "Fahrenheit", "Kelvin"]
+    var textColor: Bool {
+        return temperatureAmount == "0" ? true : false
+    }
     
     var temperatureResult: Measurement<UnitTemperature> {
         var startTemp: Measurement<UnitTemperature>
@@ -46,6 +49,7 @@ struct temperatureView: View {
             }.pickerStyle(SegmentedPickerStyle())
             TextField("Temperature Amount", text: $temperatureAmount)
                 .keyboardType(.decimalPad)
+                .background(textColor ? Color.red : Color.white)
             Picker("Convert to", selection: $temperatureTarget) {
                 ForEach(0 ..< temperatures.count) {
                     Text("\(self.temperatures[$0])")

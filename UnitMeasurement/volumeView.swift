@@ -12,7 +12,9 @@ struct volumeView: View {
     @State var volumeTarget = 0
     @State var volumeAmount = ""
     let volumes = ["ml", "liters", "cups", "pints","gallons"]
-    
+    var textColor: Bool {
+        return volumeAmount == "0" ? true : false
+    }
     var volumeResult: Measurement<UnitVolume> {
         var startVolume: Measurement<UnitVolume>
         if volume == 0 {
@@ -56,6 +58,7 @@ struct volumeView: View {
             }.pickerStyle(SegmentedPickerStyle())
             TextField("Length Amount", text: $volumeAmount)
                 .keyboardType(.decimalPad)
+                .background(textColor ? Color.red : Color.white)
             Picker("Convert to", selection: $volumeTarget) {
                 ForEach(0 ..< volumes.count) {
                     Text("\(self.volumes[$0])")
